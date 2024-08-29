@@ -1,0 +1,221 @@
+.orderPages {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    "navbar"
+    "mainContent"
+    "footer";
+  .navbar {
+    grid-area: navbar;
+    padding: 1rem;
+  }
+  .mainContent {
+    grid-area: mainContent;
+  }
+  .footer {
+    grid-area: footer;
+  }
+  @media (min-width: 768px) {
+    grid-template:
+      "navbar"
+      "mainContent"
+      "footer";
+  }
+  @media (min-width: 992px) {
+    grid-template:
+      "navbar"
+      "mainContent"
+      "footer";
+  }
+  @media (min-width: 1200px) {
+    grid-template:
+      "navbar"
+      "mainContent"
+      "footer";
+  }
+}
+.navbar {
+  grid-area: navbar;
+  background-color: #1e1e1e;
+  font-size: 20px;
+  color: white;
+  width: 90%;
+  height: 10vh;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.textNav {
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+.containerSearch {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #0fff07;
+  border-radius: 10px;
+  padding: 5;
+  width: 300px;
+  transition: all 0.3s ease;
+}
+.searchInput {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px 0 0 10px;
+  flex: 1;
+  color: white;
+  background-color: transparent;
+}
+.searchButton {
+  background: none;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 0 25px 25px 0;
+}
+.searchInput:focus {
+  border-color: #aaa;
+}
+.searchButton:focus {
+  outline: none;
+}
+.searchButton:hover {
+  color: #333;
+}
+.textMain {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: white;
+}
+.mainContent {
+  grid-area: mainContent;
+  background-color: #1e1e1e;
+  border: 2px solid #0fff07;
+  width: 90%;
+  height: 65vh;
+  font-size: 20px;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.footer {
+  grid-area: footer;
+  background-color: #1e1e1e;
+  width: 90%;
+  height: 10vh;
+  font-size: 20px;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  font-size: 20px;
+  display: flex;
+  margin-top: 2rem;
+}
+.buttonProduct {
+  border: 2px solid #0fff07;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: auto;
+  margin-left: 30px;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+.cardContainer {
+  background-color: #3f3f3f;
+  width: 90%;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "cardContainer"
+    "noPedido"
+    "clientName"
+    "mountTotal"
+    "guideNumber"
+    "saveButton"
+    "editButton";
+}
+.noPedido {
+  grid-area: noPedido;
+}
+.clientName {
+  grid-area: clientName;
+}
+.mountTotal {
+  grid-area: mountTotal;
+}
+.guideNumber {
+  grid-area: guideNumber;
+}
+.numberGuide {
+  grid-area: numberGuide;
+}
+.saveButton {
+  grid-area: saveButton;
+}
+.editButton {
+  grid-area: editButton;
+}
+@media (min-width: 768px) {
+  .cardContainer {
+    grid-template-areas:
+      "noPedido clientName mountTotal guideNumber saveButton"
+      "noPedido clientName mountTotal numberGuide editButton";
+    height: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .cardContainer {
+    grid-template-areas:
+      "noPedido clientName mountTotal guideNumber saveButton"
+      "noPedido clientName mountTotal numberGuide editButton";
+  }
+}
+@media (min-width: 1200px) {
+  .cardContainer {
+    grid-template-areas:
+      "noPedido clientName mountTotal guideNumber saveButton"
+      "noPedido clientName mountTotal numberGuide editButton";
+  }
+}
+.saveButton {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #0fff07;
+  border-radius: 10px;
+  padding: 5px;
+}
+.editButton {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #0fff07;
+  border-radius: 10px;
+  padding: 5px;
+  color: #0fff07;
+}
+.numberGuide {
+  height: 35px;
+  border: 1px solid #0fff07;
+  border-radius: 10px;
+  padding: 5px;
+  color: #0fff07;
+}

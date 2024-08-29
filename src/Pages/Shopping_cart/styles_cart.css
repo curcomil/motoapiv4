@@ -1,0 +1,64 @@
+@media (max-width: 640px) {
+  .cards_container, .price_container {
+    width: 100%;
+  }
+
+  .cards_container {
+    padding: 1rem;
+  }
+
+  .price_container {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .total_container {
+    font-size: 1rem;
+  }
+
+  .price h2 {
+    font-size: 1.5rem;
+  }
+
+  .price_container button {
+    font-size: 1rem;
+  }
+
+  .total_container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .avatar {
+    width: 75px; /* Ajusta según sea necesario */
+    height: 75px; /* Ajusta según sea necesario */
+  }
+
+  .quantity, .price {
+    font-size: 0.8rem; /* Ajusta el tamaño de la fuente */
+  }
+}
+
+.bg-green-gradient {
+  background: radial-gradient(circle, rgba(14,255,6,0.2) 0%, rgba(0,0,0,0.8) 80%);
+}
+
+.item-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.item-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.item-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 500ms;
+}
