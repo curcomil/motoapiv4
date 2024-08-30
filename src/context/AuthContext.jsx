@@ -60,9 +60,11 @@ export const AuthProvider = ({ children }) => {
       const res = await loginRequest(user);
       setUser(res.data);
       setIsAuthenticated(true);
+      Cookies.set("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data));
       localStorage.setItem("token", res.data.token);
       if (res.data.isadmin) {
+        Cookies.set("isadmin", true);
         localStorage.setItem("isAdmin", true);
       }
       await getprofile();
@@ -73,6 +75,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
+    Cookies.remove("token");
+    Cookies.remove("isadmin");
     localStorage.removeItem("user");
     localStorage.removeItem("token");
     setUser(null);
