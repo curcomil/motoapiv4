@@ -17,13 +17,18 @@ export const Navlink = () => {
   };
 
   const isitems = async () => {
-    try {
-      const response = await axios.get(`${apiUrl}/api/pedido`, {
-        withCredentials: true,
-      });
-      setItemCount(response.data.length);
-    } catch (error) {
-      console.error("Error al obtener los pedidos:", error);
+    const token = localStorage.getItem("token");
+    if (token) {
+      try {
+        const response = await axios.get(`${apiUrl}/api/pedido`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setItemCount(response.data.length);
+      } catch (error) {
+        console.error("Error al obtener los pedidos:", error);
+      }
     }
   };
 
